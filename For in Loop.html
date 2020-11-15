@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+	var game = {
+		suspects:[
+			{name:'rusty',color:'red'},
+			{name:'glan',color:'orange'}
+		]
+	};
+
+	for(let i = 0;i< game.suspects.length;i++){
+		console.log(game.suspects[i]);
+		for( var key in game.suspects[i] ){
+			console.log(key +' = '+game.suspects[i][key]);
+		}
+	}
+</script>
+</body>
+</html>

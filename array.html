@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+	var arr = [];
+	arr.name = 'sahil';
+	console.log(arr.name);
+	console.log(arr['name']);
+	console.log(arr.length);
+
+
+	arr[0] = 'something';
+	console.log(arr.length);
+
+
+	arr['l_name'] = 'khan';
+	console.log(arr.length);
+	console.log(arr);
+
+
+	arr.push('aa');
+	console.log(arr);
+	console.log(arr.length);
+
+
+	arr[10] = 'ten';
+	console.log(arr.length);
+
+	arr['&*'] = 'symbol';		//worst
+	console.log(arr['&*']);
+
+	for(let i=0;i<= arr.length;i++){
+		console.log(arr[i]);
+	}
+	console.clear();
+	arr.forEach(function(a,i){
+		console.log('index = ' + i +', value = ',a);
+	});
+	console.log( Object.keys(arr).length);
+	console.log(arr);
+
+	for( let current in arr ){
+		console.log(current);
+	}
+	// _.each(arr, function(val){
+	// 	console.log(arr);
+	// });
+</script>
+</body>
+</html>

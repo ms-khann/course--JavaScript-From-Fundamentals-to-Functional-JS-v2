@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+	var printHello = () => {console.log("hello");}
+	var add = (num1,num2) => {return num1 + num2;}
+	var obj = {
+		name:'sahil',
+		city: 'pali',
+		getName: function() {return this.name;},
+		getCity: () => {return this.city;}
+	}
+	printHello();
+	console.log( add(3,4) );
+	console.log( obj.getName() );
+	console.log( obj.getCity() ); //  it's return undefined because arrow function 									  dose'nt have this keyword
+</script>
+</body>
+</html>

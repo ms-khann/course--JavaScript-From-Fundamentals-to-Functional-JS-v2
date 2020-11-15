@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+	// Note : Destructing using array should be in an order
+	var [first,second] = ['first','second'];
+	console.log(first);
+	console.log(second);
+	var [first1,second1] = [first,second];
+	console.log(first1);
+	console.log(second1);
+
+
+
+	// Note : Destructing using object have no need maintain order
+	var {fir,sec} = {sec:'2',fir:'1'};
+	console.log(fir);
+	console.log(sec);
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+	const _ = {};
+	_.each = function(list,callback){
+		if ( array.isArray(list) ) {
+			for (let i = 0; i < list.length; i++) {
+				callback(list[i],i,list);
+			}
+		}
+		else if(typeof list === 'object'){
+			for(let key in list){
+				callback(list[key],key,list);
+			}
+		}
+		else{
+			return 'Please pass valid argument';
+		}
+	}
+
+	var arr = ['girl1','girl2','girl3'];
+	
+	_.each(arr,function(name,i,list){
+		if (list[i + 1]) {
+			console.log(list[i] + ' is younger than ' + list[i + 1]);
+		}else{
+			console.log(list + '  is oldest one');
+		}
+	});
+
+
+	// var person = {name:'sahil',contact:123,city:'pali'};
+	var person = [1,2,3];
+	person.forEach(function(val,i){
+		console.log(val);
+	});
+</script>
+</body>
+</html>
